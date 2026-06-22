@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK体育 · 再次遇见</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #faf6f0;
+            color: #2e2c29;
+            font-family: 'Segoe UI', system-ui, -apple-system, 'Noto Serif SC', 'Source Han Serif SC', serif;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+        .page-wrap {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fefcf9;
+            border-radius: 28px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.02);
+            padding: 2.8rem 2rem;
+        }
+        @media (min-width: 768px) {
+            .page-wrap {
+                padding: 4rem 3.5rem;
+            }
+        }
+        h1, h2, h3 {
+            font-weight: 450;
+            letter-spacing: 0.02em;
+        }
+        h1 {
+            font-size: 2.2rem;
+            line-height: 1.3;
+            margin-bottom: 0.4rem;
+        }
+        .hero-sub {
+            font-size: 1.1rem;
+            color: #6c6660;
+            max-width: 36em;
+            margin: 0.8rem 0 1.8rem 0;
+        }
+        .hero-card {
+            background: #f3efe9;
+            border-radius: 24px;
+            padding: 2.2rem 2rem;
+            margin: 2rem 0 3rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        .hero-card p {
+            font-size: 1.05rem;
+        }
+        .hero-card .highlight {
+            background: #fff;
+            display: inline-block;
+            padding: 0.1rem 0.8rem;
+            border-radius: 40px;
+            font-weight: 500;
+            color: #3f3a35;
+        }
+        .section-title {
+            font-size: 1.6rem;
+            margin: 2.8rem 0 1.2rem 0;
+            border-left: 6px solid #c4b7a8;
+            padding-left: 1.2rem;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.8rem;
+            margin: 1.2rem 0 1.8rem 0;
+        }
+        @media (min-width: 600px) {
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+        }
+        .feature-item {
+            background: #f7f3ed;
+            border-radius: 20px;
+            padding: 1.6rem 1.6rem 1.8rem 1.6rem;
+            transition: background 0.2s;
+        }
+        .feature-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .feature-item p {
+            color: #4d4843;
+        }
+        .quote-block {
+            background: #edebe6;
+            border-left: 6px solid #b3a698;
+            padding: 1.6rem 2rem;
+            border-radius: 0 20px 20px 0;
+            margin: 2.2rem 0;
+            font-style: normal;
+        }
+        .quote-block p {
+            margin-bottom: 0.4rem;
+        }
+        .faq-summary {
+            margin: 2.8rem 0 2rem 0;
+        }
+        .faq-item {
+            border-bottom: 1px solid #e3ddd5;
+            padding: 1.2rem 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+            color: #3f3a35;
+        }
+        .faq-a {
+            color: #5d5750;
+            padding-left: 0.4rem;
+        }
+        .footer-links {
+            margin-top: 3.2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e3ddd5;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+        .footer-links a {
+            color: #5f5a54;
+            text-decoration: none;
+            border-bottom: 1px dotted #b9aea3;
+            padding-bottom: 2px;
+            transition: border-color 0.2s;
+        }
+        .footer-links a:hover {
+            border-bottom-color: #6f655c;
+        }
+        .footer-note {
+            font-size: 0.9rem;
+            color: #8b847c;
+        }
+        .btn-mild {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #b9aea3;
+            border-radius: 40px;
+            padding: 0.4rem 1.6rem;
+            font-size: 0.9rem;
+            color: #3f3a35;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: background 0.2s, border-color 0.2s;
+        }
+        .btn-mild:hover {
+            background: #e5ddd4;
+            border-color: #9f9286;
+        }
+        .inline-link {
+            color: #5f5a54;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #cbbfb3;
+        }
+        .inline-link:hover {
+            color: #2e2c29;
+            text-decoration-color: #2e2c29;
+        }
+        .tagline {
+            font-size: 0.95rem;
+            color: #7e7670;
+            margin-top: 0.6rem;
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <!-- hero 区 -->
+    <h1>再次遇见 · 收藏一处安静的角落</h1>
+    <div class="hero-sub">有时候，我们需要的不是更多选择，而是一个可以随时回来的地方。</div>
+
+    <div class="hero-card">
+        <p><span class="highlight">✦</span> 你可能已经来过，或者只是偶然路过。<br>
+        把 <a href="https://sports1-mk.com" class="inline-link">MK体育</a> 保留在书签栏，就像在书架里留一个习惯的位置——不必每天翻看，但知道它就在那里。</p>
+        <p class="tagline">—— 收藏，是为了下次回来时不费力。</p>
+    </div>
+
+    <!-- 优势区 -->
+    <h2 class="section-title">为什么值得再次回来</h2>
+    <div class="features-grid">
+        <div class="feature-item">
+            <h3>📌 不喧哗的内容节奏</h3>
+            <p>没有弹窗轰炸，也没有浮夸导语。从资讯到赛事观察，都保持一种克制的叙述语气，像老朋友坐下来聊几句。</p>
+        </div>
+        <div class="feature-item">
+            <h3>📌 持续更新的专注领域</h3>
+            <p>围绕体育资讯与赛事延伸，但不过分追逐热点。每篇内容都经过筛选，减少信息噪音，让你回来看时依然觉得熟悉。</p>
+        </div>
+        <div class="feature-item">
+            <h3>📌 安静、稳定的浏览体验</h3>
+            <p>页面设计以阅读优先，没有复杂的跳转和干扰元素。无论使用手机还是电脑，加载迅速，版式干净。</p>
+        </div>
+        <div class="feature-item">
+            <h3>📌 保留一个回看入口</h3>
+            <p>把链接添加到收藏夹或浏览器起始页，它就会静静待在那里。下次想了解体育动态时，不必重新搜索。</p>
+        </div>
+    </div>
+
+    <!-- 说明区：从持续关注的角度 -->
+    <h2 class="section-title">持续关注，不是一种任务</h2>
+    <div class="quote-block">
+        <p>关注一个站点，有时不需要理由。只是某天你忽然想看看最近的赛事动态，或者想确认某个联赛的进展——这时候，一个你记得住、也愿意回访的地方，就显得很自然。</p>
+        <p style="margin-top:0.6rem;">—— <a href="https://sports1-mk.com" class="inline-link">MK体育</a> 并不追求让你每天打开，而是希望当你想要了解体育信息时，能轻松找到它，且不觉得打扰。</p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-summary">
+        <h3 style="font-size:1.3rem; margin-bottom:1.2rem; font-weight:450;">❓ 一些你可能想问的</h3>
+
+        <div class="faq-item">
+            <div class="faq-q">这个网站主要提供什么内容？</div>
+            <div class="faq-a">主要围绕体育赛事、联赛资讯及观察内容展开，形式偏向简洁的文字报道和信息汇总，不涉及博彩或引导性服务。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">为什么适合把链接收藏起来？</div>
+            <div class="faq-a">页面结构稳定，更新频率适中，没有过多营销元素。收藏后每次访问都直接进入内容区，节省查找时间。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">如果我很久没回来，内容会变化很大吗？</div>
+            <div class="faq-a">整体调性和排版保持一致，新内容会自然替换旧条目，但不会突然改变风格或增加复杂功能，回访时不会有陌生感。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">在移动设备上浏览体验如何？</div>
+            <div class="faq-a">针对手机屏幕做过适配，文字大小、间距和按钮都便于手指操作，横屏竖屏均可舒适阅读。</div>
+        </div>
+    </div>
+
+    <!-- 底部链接 + 温和提示 -->
+    <div class="footer-links">
+        <div>
+            <a href="https://sports1-mk.com" class="btn-mild">MK体育</a>
+            <span style="margin:0 0.6rem; color:#b9aea3;">·</span>
+            <a href="#" style="color:#7e7670; border-bottom:1px dotted #d5cdc2; text-decoration:none;">页面存档</a>
+        </div>
+        <div class="footer-note">
+            <span>你可以随时回来，不需要理由。</span>
+        </div>
+    </div>
+
+    <!-- 一行极简脚注，不喧宾夺主 -->
+    <div style="margin-top:1.6rem; font-size:0.8rem; color:#aaa39b; text-align:right; letter-spacing:0.03em;">
+        —— 把链接放在手边，比记在脑中更可靠
+    </div>
+
+</div>
+</body>
+</html>
